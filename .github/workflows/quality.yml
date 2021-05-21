@@ -8,3 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: grep "Juan Luis" README.md
+
+  spellcheck:
+    name: Run spellchecker
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: rojopolis/spellcheck-github-actions@0.14.0
+        name: Spellcheck
